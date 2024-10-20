@@ -799,7 +799,7 @@ if __name__ == "__main__":
                 )
             sim_config.agents.main_agent.ik_arm_urdf = (
                 # "./data/robots/hab_fetch/robots/fetch_onlyarm.urdf"
-                "./data/robots/hab_stretch/hab_stretch.urdf"
+                "./data/robots/hab_stretch/urdf/hab_stretch.urdf"
             )
             task_config.actions.arm_action.arm_controller = "ArmEEAction"
         if task_config.type == "RearrangePddlTask-v0":
