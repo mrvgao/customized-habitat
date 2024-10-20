@@ -175,6 +175,7 @@ def get_input_vel_ctlr(
             # Forward
             base_action = [1, 0]
 
+        import pdb; pdb.set_trace()
         if arm_action_space.shape[0] == 7:
             # Velocity control. A different key for each joint
             if keys[pygame.K_q]:
