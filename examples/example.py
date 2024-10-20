@@ -9,6 +9,12 @@ import gym
 import habitat  # noqa: F401
 import habitat.gym  # noqa: F401
 
+try:
+    import pygame
+    pygame.init()
+except ImportError:
+    pygame = None
+
 
 CONFIG_PATH = "habitat-lab/habitat/config/benchmark/rearrange/play/play_stretch.yaml"
 
