@@ -6,13 +6,20 @@
 
 import gym
 
+import habitat  # noqa: F401
 import habitat.gym  # noqa: F401
+
+
+CONFIG_PATH = "/home/minquangao/customized-habitat/habitat-lab/habitat/config/habitat/task/rearrange/actions/stretch_base_arm_empty.yaml"
 
 
 def example():
     # Note: Use with for the example testing, doesn't need to be like this on the README
 
-    with gym.make("HabitatRenderPick-v0") as env:
+    config = habitat.get_config(CONFIG_PATH)
+
+    with habitat.gym.make_gym_from_config(config) as env:
+    # with gym.make("HabitatRenderPick-v0") as env:
         print("Environment creation successful")
         observations = env.reset()  # noqa: F841
 
