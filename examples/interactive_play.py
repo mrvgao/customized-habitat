@@ -75,6 +75,7 @@ from habitat_sim.utils import viz_utils as vut
 
 try:
     import pygame
+    pygame.init()
 except ImportError:
     pygame = None
 
