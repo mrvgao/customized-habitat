@@ -10,7 +10,7 @@ import habitat  # noqa: F401
 import habitat.gym  # noqa: F401
 
 
-CONFIG_PATH = "/home/minquangao/customized-habitat/habitat-lab/habitat/config/habitat/simulator/agents/stretch.yaml"
+CONFIG_PATH = "habitat-lab/habitat/config/benchmark/rearrange/play/play_stretch.yaml"
 
 
 def example():
