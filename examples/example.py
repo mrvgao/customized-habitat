@@ -31,6 +31,9 @@ def example():
                 env.action_space.sample()
             )  # noqa: F841
             count_steps += 1
+
+        env.render()
+
         print("Episode finished after {} steps.".format(count_steps))
 
 
