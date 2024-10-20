@@ -32,7 +32,7 @@ def example():
             )  # noqa: F841
             count_steps += 1
 
-        env.render()
+            env.render()
 
         print("Episode finished after {} steps.".format(count_steps))
 
