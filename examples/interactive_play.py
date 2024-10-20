@@ -175,7 +175,6 @@ def get_input_vel_ctlr(
             # Forward
             base_action = [1, 0]
 
-        import pdb; pdb.set_trace()
         if arm_action_space.shape[0] == 7:
             # Velocity control. A different key for each joint
             if keys[pygame.K_q]:
@@ -799,7 +798,8 @@ if __name__ == "__main__":
                     "Action space does not have any arm control so cannot add inverse kinematics. Specify the `--disable-inverse-kinematics` option"
                 )
             sim_config.agents.main_agent.ik_arm_urdf = (
-                "./data/robots/hab_fetch/robots/fetch_onlyarm.urdf"
+                # "./data/robots/hab_fetch/robots/fetch_onlyarm.urdf"
+                "./data/robots/hab_stretch/hab_stretch.urdf"
             )
             task_config.actions.arm_action.arm_controller = "ArmEEAction"
         if task_config.type == "RearrangePddlTask-v0":
