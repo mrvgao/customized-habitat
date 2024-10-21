@@ -369,7 +369,8 @@ def get_input_vel_ctlr(
     print('base_action is not None', base_action is not None)
     print('base_action_name in env.action_space.spaces', base_action_name in env.action_space.spaces)
 
-    if base_action is not None and base_action_name in env.action_space.spaces:
+    # if base_action is not None and base_action_name in env.action_space.spaces:
+    if base_action is not None:
         name = base_action_name
         args = {base_key: base_action}
     else:
