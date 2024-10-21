@@ -370,7 +370,7 @@ def get_input_vel_ctlr(
     print('base_action_name in env.action_space.spaces', base_action_name in env.action_space.spaces)
 
     # if base_action is not None and base_action_name in env.action_space.spaces:
-    if base_action is not None:
+    if base_action != [0, 0]:
         name = base_action_name
         args = {base_key: base_action}
     else:
@@ -808,6 +808,7 @@ if __name__ == "__main__":
                 # "./data/robots/hab_fetch/robots/fetch_onlyarm.urdf"
                 "./data/robots/hab_stretch/urdf/hab_stretch.urdf"
             )
+            # task_config.actions.arm_action.arm_controller = "ArmRelPosKinematicReducedActionStretch"
             task_config.actions.arm_action.arm_controller = "ArmRelPosKinematicReducedActionStretch"
         if task_config.type == "RearrangePddlTask-v0":
             task_config.actions["pddl_apply_action"] = PddlApplyActionConfig()
