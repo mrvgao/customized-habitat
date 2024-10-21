@@ -565,7 +565,6 @@ def play_env(env, args, config):
             step_env(env, "pddl_apply_action", {"pddl_action": ac})
 
         if not args.no_render and keys[pygame.K_g]:
-            import pdb; pdb.set_trace()
             pred_list = env.task.sensor_suite.sensors[
                 "all_predicates"
             ]._predicates_list
