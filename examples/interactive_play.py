@@ -814,7 +814,7 @@ if __name__ == "__main__":
             # task_config.actions.arm_action.arm_controller = "ArmRelPosKinematicReducedActionStretch"
             task_config.actions.arm_action.arm_controller = "ArmRelPosKinematicReducedActionStretch"
             task_config.actions.base_velocity = BaseVelocityActionConfig
-            task_config.actions.arm_action.grip_controller = "MagicGraspAction"
+            task_config.actions.arm_action.grip_controller = "GazeGraspAction"
         if task_config.type == "RearrangePddlTask-v0":
             task_config.actions["pddl_apply_action"] = PddlApplyActionConfig()
 
