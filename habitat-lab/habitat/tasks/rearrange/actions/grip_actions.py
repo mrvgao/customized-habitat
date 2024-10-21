@@ -42,7 +42,6 @@ class MagicGraspAction(GripSimulatorTaskAction):
         return spaces.Box(shape=(1,), high=1.0, low=-1.0)
 
     def _grasp(self):
-        import pdb; pdb.set_trace()
         scene_obj_pos = self._sim.get_scene_pos()
         ee_pos = self.cur_articulated_agent.ee_transform().translation
         # Get objects we are close to.
