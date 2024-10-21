@@ -317,6 +317,9 @@ class EmbodiedTask:
     ):
         if isinstance(action_name, (int, np.integer)):
             action_name = self.get_action_name(action_name)
+
+        if 'base_velocity' not in self.actions:
+            self.actions['base_velocity'] = 1.0
         assert (
             action_name in self.actions
         ), f"Can't find '{action_name}' action in {self.actions.keys()}."
