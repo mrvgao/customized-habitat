@@ -390,6 +390,7 @@ class ArmRelPosKinematicReducedActionStretch(ArticulatedAgentAction):
         )
 
     def step(self, delta_pos, *args, **kwargs):
+        import pdb; pdb.set_trace()
         if self._should_clip:
             # clip from -1 to 1
             delta_pos = np.clip(delta_pos, -1, 1)
