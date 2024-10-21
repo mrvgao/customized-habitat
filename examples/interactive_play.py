@@ -64,7 +64,7 @@ from habitat.config.default_structured_configs import (
     ThirdRGBSensorConfig,
 )
 from habitat.core.logging import logger
-from habitat.tasks.rearrange.actions.actions import ArmEEAction, ArmRelPosKinematicReducedActionStretch
+from habitat.tasks.rearrange.actions.actions import ArmEEAction, ArmRelPosKinematicReducedActionStretch, BaseVelAction
 from habitat.tasks.rearrange.rearrange_sensors import GfxReplayMeasure
 from habitat.tasks.rearrange.utils import euler_to_quat, write_gfx_replay
 from habitat.utils.visualizations.utils import (
@@ -810,7 +810,7 @@ if __name__ == "__main__":
             )
             # task_config.actions.arm_action.arm_controller = "ArmRelPosKinematicReducedActionStretch"
             task_config.actions.arm_action.arm_controller = "ArmRelPosKinematicReducedActionStretch"
-            task_config.actions.base_velocity = "BaseVelAction"
+            task_config.actions.base_velocity = BaseVelAction
         if task_config.type == "RearrangePddlTask-v0":
             task_config.actions["pddl_apply_action"] = PddlApplyActionConfig()
 
