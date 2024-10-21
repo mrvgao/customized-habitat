@@ -294,11 +294,13 @@ def get_input_vel_ctlr(
             raise ValueError("Unrecognized arm action space")
 
         if keys[pygame.K_p]:
+            import pdb; pdb.set_trace()
             logger.info("[play.py]: Unsnapping")
             # Unsnap
             magic_grasp = -1
         elif keys[pygame.K_o]:
             # Snap
+            import pdb; pdb.set_trace()
             logger.info("[play.py]: Snapping")
             magic_grasp = 1
 
@@ -375,7 +377,6 @@ def get_input_vel_ctlr(
         name = base_action_name
         args = {base_key: base_action}
     else:
-        import pdb; pdb.set_trace()
         name = arm_action_name
         if given_arm_action:
             # The grip is also contained in the provided action
