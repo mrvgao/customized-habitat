@@ -798,7 +798,8 @@ if __name__ == "__main__":
                     "Action space does not have any arm control so cannot add inverse kinematics. Specify the `--disable-inverse-kinematics` option"
                 )
             sim_config.agents.main_agent.ik_arm_urdf = (
-                "./data/robots/hab_fetch/robots/fetch_onlyarm.urdf"
+                # "./data/robots/hab_fetch/robots/fetch_onlyarm.urdf"
+                "./data/robots/hab_stretch/urdf/hab_stretch.urdf"
             )
             task_config.actions.arm_action.arm_controller = "ArmRelPosKinematicReducedActionStretch"
         if task_config.type == "RearrangePddlTask-v0":
