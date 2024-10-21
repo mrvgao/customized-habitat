@@ -263,8 +263,8 @@ class BaseVelocityActionConfig(ActionConfig):
     In Rearrangement only. Corresponds to the base velocity. Contains two continuous actions, the first one controls forward and backward motion, the second the rotation.
     """
     type: str = "BaseVelAction"
-    lin_speed: float = 10.0
-    ang_speed: float = 10.0
+    lin_speed: float = 2.0
+    ang_speed: float = 2.0
     allow_dyn_slide: bool = True
     allow_back: bool = True
 
