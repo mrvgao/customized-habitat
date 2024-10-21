@@ -267,6 +267,8 @@ class BaseVelocityActionConfig(ActionConfig):
     ang_speed: float = 2.0
     allow_dyn_slide: bool = True
     allow_back: bool = True
+    enable_lateral_move: bool = True
+
 
 
 @dataclass
