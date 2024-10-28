@@ -73,6 +73,7 @@ from habitat.utils.visualizations.utils import (
     overlay_frame,
 )
 from habitat_sim.utils import viz_utils as vut
+import asyncio
 
 try:
     import pygame
@@ -674,7 +675,7 @@ def has_pygame():
     return pygame is not None
 
 
-if __name__ == "__main__":
+async def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--no-render", action="store_true", default=False)
     parser.add_argument("--save-obs", action="store_true", default=False)
@@ -817,3 +818,6 @@ if __name__ == "__main__":
 
     with habitat.Env(config=config) as env:
         play_env(env, args, config)
+
+
+asyncio.run(main())
