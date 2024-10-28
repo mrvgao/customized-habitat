@@ -675,7 +675,7 @@ def has_pygame():
     return pygame is not None
 
 
-async def main():
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--no-render", action="store_true", default=False)
     parser.add_argument("--save-obs", action="store_true", default=False)
@@ -820,4 +820,5 @@ async def main():
         play_env(env, args, config)
 
 
-asyncio.run(main())
+if __name__ == '__main__':
+    main()
